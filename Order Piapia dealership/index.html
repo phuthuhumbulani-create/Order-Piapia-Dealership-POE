@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Order Piapia Dealership offers quality cars for sale, professional vehicle repairs, maintenance, servicing and trade-in services in South Africa.">
+    <meta name="keywords" content="Order Piapia Dealership, cars for sale, vehicle dealership, car repairs, vehicle servicing, car maintenance, Pretoria car dealership">
+    <meta name="author" content="Order Piapia Dealership">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://orderpiapiadealership.com/">
+
+    <!-- Social Media SEO -->
+    <meta property="og:title" content="Order Piapia Dealership">
+    <meta property="og:description" content="Buy quality cars and get professional vehicle repairs and servicing.">
+    <meta property="og:image" content="https://orderpiapiadealership.com/_images/cover.png">
+    <meta property="og:url" content="https://orderpiapiadealership.com/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css_assets/myfirststyle.css">
+
+    <title>Order Piapia Dealership | Quality Cars, Repairs & Servicing</title>
+
+    <!-- Local SEO Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "Order Piapia Dealership",
+      "description": "Vehicle sales, maintenance, repairs and servicing.",
+      "url": "https://orderpiapiadealership.com/",
+      "image": "https://orderpiapiadealership.com/_images/cover.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZA"
+      },
+      "areaServed": "South Africa"
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #b5a0a0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #b5a0a0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 120px;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+        img, video {
+            max-width: 100%;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .button {
+            background: #5d4545;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #382b2b;
+        }
+
+        /* Interactive Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 10px 15px;
+            border: 1px solid #5d4545;
+            cursor: pointer;
+            background: transparent;
+            border-radius: 5px;
+        }
+
+        .tab-button.active {
+            background: #5d4545;
+            color: white;
+        }
+
+        .tab-content {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Accordion */
+        .accordion-button {
+            width: 100%;
+            padding: 12px;
+            background: #5d4545;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            margin-top: 5px;
+        }
+
+        .accordion-content {
+            display: none;
+            background: white;
+            padding: 15px;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        /* Dynamic Services */
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .controls input,
+        .controls select {
+            padding: 10px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image Lightbox */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .modal-content img {
+            max-height: 75vh;
+            border-radius: 5px;
+        }
+
+        .close {
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal,
+            .service-card {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Order Piapia Dealership</h1>
+
+    <img src="_images/Logo.png"
+         alt="Order Piapia Dealership official logo"
+         width="120"
+         height="120">
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="enquiries.html">Enquiries</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Welcome Section -->
+    <section class="reveal">
+        <h2>Welcome to Order Piapia Dealership</h2>
+
+        <p>
+            Your trusted partner for quality vehicle sales,
+            professional repairs and regular servicing.
+        </p>
+
+        <img
+            class="hero-image lightbox-trigger"
+            src="_images/cover.png"
+            alt="Quality cars available at Order Piapia Dealership showroom"
+            data-caption="Welcome to Order Piapia Dealership"
+            fetchpriority="high">
+
+        <p>
+            <a href="enquiries.html" class="button">Make an Enquiry</a>
+        </p>
+
+        <video width="640" controls preload="metadata">
+            <source src="_videos/cover_video.mp4" type="video/mp4">
+            <source src="_videos/cover_video.ogg" type="video/ogg">
+            Your browser does not support this video.
+        </video>
+    </section>
+
+    <!-- Interactive Tabs -->
+    <section class="reveal">
+        <h2>Explore Our Dealership</h2>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="sales">
+                Car Sales
+            </button>
+
+            <button class="tab-button" data-tab="repairs">
+                Repairs
+            </button>
+
+            <button class="tab-button" data-tab="servicing">
+                Servicing
+            </button>
+        </div>
+
+        <div id="sales" class="tab-content">
+            <h3>Vehicle Sales</h3>
+            <p>
+                Explore quality vehicles available for purchase.
+                Contact us to enquire about your dream car.
+            </p>
+            <a href="enquiries.html">Enquire about a vehicle</a>
+        </div>
+
+        <div id="repairs" class="tab-content" hidden>
+            <h3>Vehicle Repairs</h3>
+            <p>
+                We help diagnose and repair vehicle problems
+                to keep your car running smoothly.
+            </p>
+            <a href="services.html">Learn about our services</a>
+        </div>
+
+        <div id="servicing" class="tab-content" hidden>
+            <h3>Vehicle Servicing</h3>
+            <p>
+                We provide routine vehicle maintenance and servicing.
+            </p>
+            <a href="contact.html">Contact us for servicing</a>
+        </div>
+    </section>
+
+    <!-- Dynamic Services and Search -->
+    <section class="reveal">
+        <h2>Our Services</h2>
+
+        <img
+            class="hero-image lightbox-trigger"
+            src="_images/services.png"
+            alt="Vehicle repairs and maintenance services at Order Piapia Dealership"
+            data-caption="Our Professional Automotive Services"
+            loading="lazy">
+
+        <div class="controls">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search services..."
+                aria-label="Search dealership services">
+
+            <select id="sortSelect" aria-label="Sort services">
+                <option value="az">Sort A to Z</option>
+                <option value="za">Sort Z to A</option>
+            </select>
+        </div>
+
+        <div id="serviceList" class="service-grid" aria-live="polite"></div>
+
+        <p id="noResults" hidden>No services found.</p>
+
+        <p>
+            View all our
+            <a href="services.html">vehicle sales, repairs and servicing</a>.
+        </p>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="reveal">
+        <h2>Frequently Asked Questions</h2>
+
+        <button class="accordion-button" aria-expanded="false">
+            Can I enquire about a vehicle online?
+        </button>
+
+        <div class="accordion-content">
+            <p>
+                Yes. Visit our
+                <a href="enquiries.html">Enquiries page</a>
+                and send us the details of the vehicle you are interested in.
+            </p>
+        </div>
+
+        <button class="accordion-button" aria-expanded="false">
+            Do you repair and service cars?
+        </button>
+
+        <div class="accordion-content">
+            <p>
+                Yes. We provide vehicle repairs and regular servicing.
+                Visit our <a href="services.html">Services page</a>
+                to learn more.
+            </p>
+        </div>
+
+        <button class="accordion-button" aria-expanded="false">
+            How can I contact the dealership?
+        </button>
+
+        <div class="accordion-content">
+            <p>
+                Visit our <a href="contact.html">Contact page</a>
+                or use our online enquiry form.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<!-- Image Lightbox -->
+<div class="modal" id="imageModal" role="dialog"
+     aria-modal="true" aria-label="Image preview">
+
+    <div class="modal-content">
+        <button class="close" id="closeModal" aria-label="Close image preview">
+            &times;
+        </button>
+
+        <img id="modalImage" src="" alt="Enlarged dealership image">
+
+        <p id="modalCaption"></p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>
+        &copy; <span id="currentYear"></span>
+        Order Piapia Dealership. All rights reserved.
+    </p>
+
+    <p>
+        Follow us on social media for the latest updates and promotions.
+    </p>
+
+    <p>
+        <a href="about.html">About Us</a> |
+        <a href="services.html">Our Services</a> |
+        <a href="contact.html">Contact Us</a>
+    </p>
+</footer>
+
+
+<script src="js_assets/myscript.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Display current year
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+
+    // INTERACTIVE TABS
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            tabButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            tabContents.forEach(content => {
+                content.hidden = true;
+            });
+
+            button.classList.add("active");
+
+            const selectedTab = button.dataset.tab;
+
+            document.getElementById(selectedTab).hidden = false;
+        });
+    });
+
+
+    // FAQ ACCORDION
+    const accordionButtons =
+        document.querySelectorAll(".accordion-button");
+
+    accordionButtons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            const content = button.nextElementSibling;
+
+            content.classList.toggle("active");
+
+            const expanded = content.classList.contains("active");
+
+            button.setAttribute("aria-expanded", expanded);
+        });
+    });
+
+
+    // DYNAMIC SERVICES
+    const services = [
+        {
+            name: "Vehicle Sales",
+            description: "Explore quality vehicles available for purchase."
+        },
+        {
+            name: "Maintenance and Repairs",
+            description: "Get professional help with vehicle problems."
+        },
+        {
+            name: "Vehicle Servicing",
+            description: "Keep your vehicle in good condition."
+        },
+        {
+            name: "Financing Options",
+            description: "Enquire about available vehicle financing."
+        },
+        {
+            name: "Trade-In Services",
+            description: "Trade in your current vehicle."
+        }
+    ];
+
+    const serviceList = document.getElementById("serviceList");
+    const searchInput = document.getElementById("searchInput");
+    const sortSelect = document.getElementById("sortSelect");
+    const noResults = document.getElementById("noResults");
+
+    function displayServices() {
+
+        const searchValue = searchInput.value.toLowerCase();
+        const sortValue = sortSelect.value;
+
+        let filteredServices = services.filter(service => {
+            return (
+                service.name.toLowerCase().includes(searchValue) ||
+                service.description.toLowerCase().includes(searchValue)
+            );
+        });
+
+        filteredServices.sort((a, b) => {
+            if (sortValue === "az") {
+                return a.name.localeCompare(b.name);
+            }
+
+            return b.name.localeCompare(a.name);
+        });
+
+        serviceList.innerHTML = "";
+
+        filteredServices.forEach(service => {
+
+            const card = document.createElement("article");
+            card.className = "service-card";
+
+            const heading = document.createElement("h3");
+            heading.textContent = service.name;
+
+            const paragraph = document.createElement("p");
+            paragraph.textContent = service.description;
+
+            card.appendChild(heading);
+            card.appendChild(paragraph);
+
+            serviceList.appendChild(card);
+        });
+
+        noResults.hidden = filteredServices.length > 0;
+    }
+
+    searchInput.addEventListener("input", displayServices);
+    sortSelect.addEventListener("change", displayServices);
+
+    displayServices();
+
+
+    // IMAGE LIGHTBOX
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalCaption = document.getElementById("modalCaption");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll(".lightbox-trigger").forEach(image => {
+
+        image.addEventListener("click", function () {
+
+            modal.classList.add("active");
+
+            modalImage.src = image.src;
+            modalImage.alt = image.alt;
+
+            modalCaption.textContent = image.dataset.caption;
+        });
+    });
+
+    closeModal.addEventListener("click", function () {
+        modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            modal.classList.remove("active");
+        }
+    });
+
+
+    // SCROLL ANIMATIONS
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+                }
+            });
+
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+
+    } else {
+
+        revealElements.forEach(element => {
+            element.classList.add("visible");
+        });
+    }
+
+});
+</script>
+
+</body>
+</html>

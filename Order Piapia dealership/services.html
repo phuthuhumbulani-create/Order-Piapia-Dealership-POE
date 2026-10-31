@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Order Piapia Dealership offers quality vehicle sales, professional car repairs, maintenance, servicing, financing and trade-in services.">
+
+    <meta name="keywords" content="Order Piapia Dealership, car dealership, vehicle sales, car repairs, vehicle maintenance, servicing, financing, trade-in">
+
+    <meta name="author" content="Order Piapia Dealership">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css_assets/myfirststyle.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <title>Order Piapia Dealership | Our Automotive Services</title>
+
+    <meta property="og:title" content="Order Piapia Dealership">
+    <meta property="og:description" content="Discover our vehicle sales, repairs and professional automotive services.">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            background-color: #b5a0a0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #b5a0a0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 150px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav a {
+            color: #222;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #f5eeee;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card i {
+            font-size: 30px;
+            color: #5d4545;
+            margin-bottom: 10px;
+        }
+
+        .service-card h3 {
+            color: #5d4545;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #5d4545;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #382b2b;
+            color: white;
+        }
+
+        .faq-button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #5d4545;
+            color: white;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .faq-content {
+            display: none;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .faq-content.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Order Piapia Dealership</h1>
+
+    <img src="_images/Logo.png"
+         alt="Order Piapia Dealership Logo">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="enquiries.html">Enquiries</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <section>
+
+        <h2>Our Services</h2>
+
+        <img src="_images/services.png"
+             alt="Order Piapia Dealership automotive services"
+             loading="lazy">
+
+        <p>
+            At Order Piapia Dealership, we offer a comprehensive range
+            of services to meet all your automotive needs. Our team of
+            experienced professionals is dedicated to providing
+            excellent service and ensuring your satisfaction.
+        </p>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <i class="fas fa-car"></i>
+
+                <h3>Vehicle Sales</h3>
+
+                <p>
+                    Explore our selection of quality new and pre-owned
+                    vehicles. We help you find a car that suits your
+                    needs and budget.
+                </p>
+
+                <a href="enquiries.html" class="button">
+                    Enquire About Cars
+                </a>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fas fa-tools"></i>
+
+                <h3>Maintenance and Repairs</h3>
+
+                <p>
+                    Keep your vehicle in excellent condition with
+                    professional maintenance and repair services.
+                </p>
+
+                <a href="contact.html" class="button">
+                    Book a Repair
+                </a>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fas fa-money-bill-wave"></i>
+
+                <h3>Financing Options</h3>
+
+                <p>
+                    Enquire about available financing options to help
+                    you purchase your dream vehicle.
+                </p>
+
+                <a href="enquiries.html" class="button">
+                    Enquire About Financing
+                </a>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fas fa-exchange-alt"></i>
+
+                <h3>Trade-In Services</h3>
+
+                <p>
+                    Upgrade your vehicle with our convenient trade-in
+                    services. Enquire about trading in your current car.
+                </p>
+
+                <a href="enquiries.html" class="button">
+                    Enquire About Trade-In
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>Why Choose Order Piapia Dealership?</h2>
+
+        <p>
+            We are committed to providing exceptional customer service
+            and ensuring that your experience with us is smooth and
+            enjoyable.
+        </p>
+
+        <ul>
+            <li>Quality vehicles for different budgets.</li>
+            <li>Professional vehicle repairs and maintenance.</li>
+            <li>Friendly and helpful customer service.</li>
+            <li>Convenient vehicle trade-in enquiries.</li>
+            <li>Assistance with vehicle purchasing enquiries.</li>
+        </ul>
+
+        <p>
+            Whether you are looking to purchase a vehicle, need
+            maintenance for your current car, or have other automotive
+            needs, our team is here to assist you.
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <button class="faq-button" aria-expanded="false">
+            What types of vehicles do you sell?
+        </button>
+
+        <div class="faq-content">
+            <p>
+                We offer a selection of new and pre-owned vehicles.
+                Contact us to enquire about available vehicles.
+            </p>
+        </div>
+
+        <button class="faq-button" aria-expanded="false">
+            Do you provide vehicle repairs?
+        </button>
+
+        <div class="faq-content">
+            <p>
+                Yes. We provide vehicle maintenance and repair services.
+                Contact us to enquire about your vehicle's needs.
+            </p>
+        </div>
+
+        <button class="faq-button" aria-expanded="false">
+            Can I trade in my current vehicle?
+        </button>
+
+        <div class="faq-content">
+            <p>
+                Yes. You can contact us to enquire about our
+                vehicle trade-in services.
+            </p>
+        </div>
+
+        <button class="faq-button" aria-expanded="false">
+            How can I enquire about your services?
+        </button>
+
+        <div class="faq-content">
+            <p>
+                Visit our Enquiries page and submit your details.
+                Our team will get back to you.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>Contact Us</h2>
+
+        <p>
+            For more information about our services or to schedule
+            an appointment, please contact us.
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:info@orderpiapia.com">
+                info@orderpiapia.com
+            </a>
+        </p>
+
+        <p>
+            Phone:
+            <a href="tel:+27774232413">
+                +27 77 423 2413
+            </a>
+        </p>
+
+        <a href="enquiries.html" class="button">
+            Submit an Enquiry
+        </a>
+
+    </section>
+
+
+    <section>
+
+        <h2>Follow Us on Social Media</h2>
+
+        <p>
+            Follow Order Piapia Dealership for the latest updates,
+            vehicle information and promotions.
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/orderpiapia"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Facebook
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.twitter.com/orderpiapia"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Twitter
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/orderpiapia"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        &copy; <span id="currentYear">2026</span>
+        Order Piapia Dealership. All rights reserved.
+    </p>
+
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="enquiries.html">Enquiries</a>
+    </p>
+
+</footer>
+
+<script src="js_assets/myscript.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    var faqButtons = document.querySelectorAll(".faq-button");
+
+    faqButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            var content = button.nextElementSibling;
+
+            if (content) {
+
+                content.classList.toggle("active");
+
+                var expanded = content.classList.contains("active");
+
+                button.setAttribute("aria-expanded", expanded);
+
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>

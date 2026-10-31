@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Order Piapia Dealership - Submit an enquiry about our automotive services.">
+    <meta name="keywords" content="Order Piapia Dealership, enquiries, automotive services, contact">
+    <meta name="author" content="Order Piapia Dealership">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css_assets/myfirststyle.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <title>Order Piapia Dealership - Enquiries</title>
+
+    <style>
+        body {
+            background-color: #b5a0a0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #b5a0a0;
+            text-align: center;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #f5eeee;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        form button {
+            background-color: #5d4545;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #382b2b;
+        }
+
+        .error-message {
+            color: #b00020;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .input-error {
+            border: 2px solid #b00020 !important;
+        }
+
+        #formStatus {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        #formStatus.success {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        #formStatus.error {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .container {
+            background-color: #c1a2a1;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer iframe {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Order Piapia Dealership</h1>
+
+    <img src="_images/Logo.png"
+         alt="Order Piapia Dealership Logo"
+         width="150">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="enquiries.html">Enquiries</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+
+        <h2>Enquiries</h2>
+
+        <p>
+            If you have any questions or would like to enquire
+            about our services, please fill out the form below:
+        </p>
+
+        <!-- AJAX Enquiry Form -->
+        <form id="enquiryForm"
+              action="submit_enquiry.php"
+              method="post"
+              novalidate>
+
+            <label for="name">Name:</label>
+
+            <input type="text"
+                   id="name"
+                   name="name"
+                   placeholder="Enter your full name"
+                   required>
+
+            <span class="error-message" id="nameError"></span>
+
+
+            <label for="email">Email:</label>
+
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="Enter your email address"
+                   required>
+
+            <span class="error-message" id="emailError"></span>
+
+
+            <label for="message">Message:</label>
+
+            <textarea id="message"
+                      name="message"
+                      placeholder="Write your enquiry here..."
+                      required></textarea>
+
+            <span class="error-message" id="messageError"></span>
+
+
+            <button type="submit" id="submitButton">
+                Submit Enquiry
+            </button>
+
+            <div id="formStatus" role="status" aria-live="polite"></div>
+
+        </form>
+
+
+        <!-- Google Form -->
+        <h3>Alternative Enquiry Form</h3>
+
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc0nM0Qcv2mFazYstKAl8twwrmPzeaAu6jgqnS2vCVBfGdQqA/viewform?embedded=true"
+            width="100%"
+            height="989"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+            Loading…
+        </iframe>
+
+
+        <h3>Response from our clients</h3>
+
+        <img src="_images/enquiries.png"
+             alt="Customer enquiries and feedback"
+             loading="lazy"
+             style="max-width:100%;">
+
+    </section>
+
+
+    <section>
+
+        <p>
+            We value your feedback and will get back to you
+            as soon as possible.
+        </p>
+
+        <p>
+            Thank you for choosing Order Piapia Dealership!
+        </p>
+
+        <p>
+            For urgent enquiries, please contact us at
+            <a href="mailto:info@orderpiapia.com">
+                info@orderpiapia.com
+            </a>.
+        </p>
+
+        <p>
+            Follow us on social media for the latest updates and promotions:
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/orderpiapia"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Facebook
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.twitter.com/orderpiapia"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Twitter
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/orderpiapia"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+
+    <div class="container">
+
+        <p>
+            We look forward to hearing from you and assisting
+            with your automotive needs!
+        </p>
+
+        <p>
+            <strong>Note:</strong>
+            Please ensure that all fields are filled out accurately
+            to help us respond to your enquiry promptly.
+        </p>
+
+        <p>
+            <strong>Disclaimer:</strong>
+            The information provided in this form will be used solely
+            for the purpose of responding to your enquiry and will
+            not be shared with third parties.
+        </p>
+
+        <p>
+            <strong>Response Time:</strong>
+            Please allow up to 48 hours for a response.
+        </p>
+
+        <p>
+            For immediate assistance, please call our customer
+            service hotline at +27 77 423 2413 during business hours.
+        </p>
+
+        <p>
+            We value your privacy and will handle your personal
+            information with care and confidentiality.
+        </p>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 Order Piapia Dealership.
+        All rights reserved.
+    </p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.5451987133015!2d28.204924180241722!3d-25.719478119050304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfdf3e77ee59a3%3A0x6ce1d0b19f7b396f!2sGezina%20Autobody%20Specialists!5e0!3m2!1sen!2sza!4v1793164060827!5m2!1sen!2sza"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+</footer>
+
+
+<!-- JavaScript Form Validation and AJAX Submission -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("enquiryForm");
+
+    const nameInput = document.getElementById("name");
+
+    const emailInput = document.getElementById("email");
+
+    const messageInput = document.getElementById("message");
+
+    const submitButton = document.getElementById("submitButton");
+
+    const formStatus = document.getElementById("formStatus");
+
+
+    // Display error messages
+    function showError(input, errorId, message) {
+
+        const errorElement = document.getElementById(errorId);
+
+        errorElement.textContent = message;
+
+        input.classList.add("input-error");
+
+        input.setAttribute("aria-invalid", "true");
+    }
+
+
+    // Remove error messages
+    function clearError(input, errorId) {
+
+        const errorElement = document.getElementById(errorId);
+
+        errorElement.textContent = "";
+
+        input.classList.remove("input-error");
+
+        input.setAttribute("aria-invalid", "false");
+    }
+
+
+    // Validate name
+    function validateName() {
+
+        const name = nameInput.value.trim();
+
+        if (name === "") {
+
+            showError(
+                nameInput,
+                "nameError",
+                "Please enter your name."
+            );
+
+            return false;
+        }
+
+        if (name.length < 2) {
+
+            showError(
+                nameInput,
+                "nameError",
+                "Name must contain at least 2 characters."
+            );
+
+            return false;
+        }
+
+        clearError(nameInput, "nameError");
+
+        return true;
+    }
+
+
+    // Validate email
+    function validateEmail() {
+
+        const email = emailInput.value.trim();
+
+        const emailPattern =
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (email === "") {
+
+            showError(
+                emailInput,
+                "emailError",
+                "Please enter your email address."
+            );
+
+            return false;
+        }
+
+        if (!emailPattern.test(email)) {
+
+            showError(
+                emailInput,
+                "emailError",
+                "Please enter a valid email address."
+            );
+
+            return false;
+        }
+
+        clearError(emailInput, "emailError");
+
+        return true;
+    }
+
+
+    // Validate message
+    function validateMessage() {
+
+        const message = messageInput.value.trim();
+
+        if (message === "") {
+
+            showError(
+                messageInput,
+                "messageError",
+                "Please enter your enquiry message."
+            );
+
+            return false;
+        }
+
+        if (message.length < 10) {
+
+            showError(
+                messageInput,
+                "messageError",
+                "Your message must contain at least 10 characters."
+            );
+
+            return false;
+        }
+
+        clearError(messageInput, "messageError");
+
+        return true;
+    }
+
+
+    // Validate fields while typing
+    nameInput.addEventListener("input", validateName);
+
+    emailInput.addEventListener("input", validateEmail);
+
+    messageInput.addEventListener("input", validateMessage);
+
+
+    // AJAX Form Submission
+    form.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        formStatus.className = "";
+
+        formStatus.textContent = "";
+
+        formStatus.style.display = "none";
+
+
+        // Client-side validation
+        const isNameValid = validateName();
+
+        const isEmailValid = validateEmail();
+
+        const isMessageValid = validateMessage();
+
+
+        // Stop submission if invalid
+        if (!isNameValid || !isEmailValid || !isMessageValid) {
+
+            formStatus.textContent =
+                "Please correct the errors before submitting.";
+
+            formStatus.className = "error";
+
+            formStatus.style.display = "block";
+
+            return;
+        }
+
+
+        // Disable button during submission
+        submitButton.disabled = true;
+
+        submitButton.textContent = "Submitting...";
+
+
+        try {
+
+            // Submit form data asynchronously
+            const response = await fetch(form.action, {
+
+                method: "POST",
+
+                body: new FormData(form),
+
+                headers: {
+                    "Accept": "application/json"
+                }
+
+            });
+
+
+            if (!response.ok) {
+
+                throw new Error("The server could not process your enquiry.");
+            }
+
+
+            // Display success message
+            formStatus.textContent =
+                "Your enquiry has been submitted successfully! We will contact you soon.";
+
+            formStatus.className = "success";
+
+            formStatus.style.display = "block";
+
+
+            // Clear form after successful submission
+            form.reset();
+
+            clearError(nameInput, "nameError");
+
+            clearError(emailInput, "emailError");
+
+            clearError(messageInput, "messageError");
+
+
+        } catch (error) {
+
+            // Display error message
+            formStatus.textContent =
+                "Something went wrong. Please try again or contact us directly.";
+
+            formStatus.className = "error";
+
+            formStatus.style.display = "block";
+
+        } finally {
+
+            // Enable button again
+            submitButton.disabled = false;
+
+            submitButton.textContent = "Submit Enquiry";
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
